@@ -1,0 +1,14 @@
+{
+  "prettier.printWidth": 120,
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#287050",
+    "titleBar.inactiveBackground": "#20573e",
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveForeground": "#eeeeee"
+  }
+}
