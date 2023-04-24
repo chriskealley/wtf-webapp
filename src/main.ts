@@ -1,20 +1,15 @@
 import { createApp } from "vue";
-import "uno.css";
+import { createPinia } from "pinia";
 import App from "./App.vue";
-import * as VueRouter from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
+import { routes } from "./routes";
+import "uno.css";
 
-import Home from "./views/HomeView.vue";
-import About from "./views/AboutView.vue";
+const pinia = createPinia();
 
-const routes = [
-  { path: "/", component: Home },
-  { path: "/about", component: About },
-];
-
-const router = VueRouter.createRouter({
-  // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
-  history: VueRouter.createWebHashHistory(),
-  routes, // short for `routes: routes`
+const router = createRouter({
+  history: createWebHistory(),
+  routes: routes,
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(pinia).use(router).mount("#app");
